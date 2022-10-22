@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> 
+        
+        <title>Table</title>
+        <link rel="stylesheet" href="estilos.css">
+        <scrip src="http://kit.fontawesome-com/a076d05399.js"></script>
+
+</head>
+<body>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th class="table-info">platillo</th>
+                <th class="table-info">nombre</th>
+                <th class="table-info">pais</th>
+                <th class="table-info">receta</th>
+                <th class="table-info">precio</th>
+                <th class="table-info">comprar</th>
+            </tr> 
+        </thead>
+        <tbody>          
+            <tr>
+                <td><figure class="figure">
+                    <img src="img/tacos.jpg" width="100px" class="figure-img img-fluid rounded" alt="imagen de tacos">
+                    <figcaption class="figure-caption"></figcaption>
+                  </figure>
+                </td>
+                <td>tacos</td>
+                <td>Mexico</td>
+                <td><span class="badge text-bg-info"><i style="color: aliceblue ;" onclick="mensaje1()">Receta</i></span></td>
+                <td>$4.50</td>
+                <td>
+                    <button class="btn-info">
+                        <i class="bi bi-cart4"></i> 
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td><figure class="figure">
+                    <img src="img/pupusas.jpg" width="100px" class="figure-img img-fluid rounded" alt="imagen de pupusas">
+                    <figcaption class="figure-caption"></figcaption>
+                  </figure>
+                </td>
+                <td>pupusas</td>
+                <td>El salvador</td>
+                <td><span class="badge text-bg-info"><i style="color: aliceblue ;" onclick="mensaje()">Receta</i></span></td>
+                <td>$0.85</td>
+                <td><button class="btn-info">
+                    <i class="bi bi-cart4"></i>
+                </button>
+                </td>
+            </tr>
+            <tr>
+                <td><figure class="figure">
+                    <img src="img/espagueti.jpg" width="100px" class="figure-img img-fluid rounded" alt="imagen de espagueti">
+                    <figcaption class="figure-caption"></figcaption>
+                  </figure>
+                </td>
+                <td>Espagueti a la boloñesa</td>
+                <td>Italia</td>
+                <td><span class="badge text-bg-info"><i style="color: aliceblue ;" onclick="mensaje2 ()">Receta</i></span></td>
+                <td>$3.00</td>
+                <td><button class="btn-info">
+                    <i class="bi bi-cart4"></i>
+                </button>
+                </td>
+            </tr>
+        </tbody>          
+    </table>
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    function mensaje() {
+            Swal.fire({
+                title: 'Receta',
+                text: 'Receta',                
+                
+               
+                html:
+                    'Picar la cebolla, el chile fresco, el cilantro y el ajo por separado y reservar.Calentar 2 o 3 cucharadas de aceite en una sartén y sofreír con el orégano, el comino y el chile seco, unos dos minutos hasta que empiece a soltar aroma.Añadir el ajo y el chile y sofreír 2 o 3 minutos más.Añadir la carne, salar y remover, y dejar cocinar hasta que la carne esté hecha, unos 10 minutos.',
+                    'Apagar el fuego, añadir el cilantro picado y el zumo de lima y remover.Calentar las tortillas en el horno por 1 o 2 minutos, solo se tienen que calentar.También podéis dorarlas un poco como hemos visto antes (colgadas de la rejilla) si queréis que queden crujientes. Rellenar con la carne y servir llevando a la mesa los ingredientes para acompañar por separado, para que cada uno se prepare su taco como prefiera '
+                                      
+                    :focusConfirm, false:
+                    confirmButtonText,
+                        '<i class="fa fa-thumbs-up"></i> De acuerdo!'
+                                
+                })
+            
+        }
+
+        function mensaje1() {
+            Swal.fire({
+                title: 'Receta',
+                text: 'Receta',                
+                
+               
+                html:
+                    'Primeramente se necesita limpiar la plancha con un poco de aceite o manteca, para evitar que las pupusas se se peguen. Luego debe preparar la harina, la cual se revuelve con agua caliente para formar la masa. Se toma un poco de masa y se golpea con la palma de la mano hasta darle la forma de una tortilla. Colóquela en la palma de la mano y en el centro agréguele los ingredientes mencionados anteriormente. Este es el paso más difícil en el cual debe cerrarse la masa y los ingredientes deben quedar en el interior. Con la práctica se logra perfeccionar la técnica. Después se tira en la plancha para darle su cocimiento por un tiempo máximo de 5 minutos. Y listo para servir y comer caliente.                   
+                
+                    
+                                      
+                    ,focusConfirm, false:
+                    confirmButtonText,
+                        '<i class="fa fa-thumbs-up"></i> De acuerdo!'
+                                
+                })
+            
+        }
+        function mensaje2() {
+            Swal.fire({
+                title: 'Receta',
+                text: 'Receta',                
+                
+               
+                html:
+                    'Sofríe la carne con la cebolla, ajo y tomillo en una sartén grande con el aceite de oliva; cuando la carne dore, añade el vino tinto y la salsa de jitomate. Cuece a fuego bajo durante 30 minutos, rectifica la sazón y mantén caliente.Hierve la pasta en agua con sal hasta que esté suave (al dente), integra con la boloñesa y sirve.Termina con el parmesano y un poco más de pimienta espolvoreada. ' +                    
+                    
+                    
+                    
+                                      
+                    focusConfirm, false:
+                    confirmButtonText,
+                        '<i class="fa fa-thumbs-up"></i> De acuerdo!'
+                                
+                })
+            
+        }
+</script>
+
+</html>
